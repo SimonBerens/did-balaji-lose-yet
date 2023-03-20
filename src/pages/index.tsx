@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     }
   }, [])
 
-  if (window.screen.width < 768) {
+  if (typeof window !== 'undefined' && window.screen.width < 768) {
     return (
       <Mobile time={timeStr} />
     )
